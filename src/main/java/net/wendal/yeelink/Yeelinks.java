@@ -6,15 +6,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import net.wendal.yeelink.impl.SimpleYeelink;
 import net.wendal.yeelink.spi.Yeelink;
-import net.wendal.yeelink.spi.YeelinkObject;
-
-import org.json.simple.JSONValue;
 
 public class Yeelinks {
 

@@ -24,7 +24,7 @@ public interface Yeelink {
 	
 	//-------------------------------------
 	
-	String upload(String device_id, String sensor_id, Object val);
+	void upload(String device_id, String sensor_id, Object val);
 	
-	String upload(String device_id, String sensor_id, String key, YeelinkObject val);
+	void upload(String device_id, String sensor_id, String key, YeelinkObject val);
 }
