@@ -1,8 +1,12 @@
 package net.wendal.yeelink.spi;
 
-@SuppressWarnings("unchecked")
+import java.util.Map;
+
 public class YeelinkLocation extends YeelinkObject {
 
+	public YeelinkLocation(Map<String, ? extends Object> map) {
+		super(map);
+	}
 	private static final long serialVersionUID = -1183425111266362885L;
 
 	public String getLocal() {

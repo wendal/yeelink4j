@@ -6,7 +6,9 @@ public interface Yeelink {
 
 	String createDev(YeelinkDev dev);
 	
-	String updateDev(YeelinkDev dev);
+	void updateDev(YeelinkDev dev);
+	
+	List<YeelinkDev> listDev();
 	
 	YeelinkDev getDev(String device_id);
 	
@@ -16,7 +18,7 @@ public interface Yeelink {
 	
 	String createSensor(String device_id, YeelinkSensor sensor);
 	
-	String updateSensor(String device_id, YeelinkSensor sensor);
+	void updateSensor(String device_id, YeelinkSensor sensor);
 	
 	List<YeelinkSensor> getSensors(String device_id);
 	

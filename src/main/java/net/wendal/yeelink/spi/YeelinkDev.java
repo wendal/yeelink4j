@@ -7,7 +7,8 @@ public class YeelinkDev extends YeelinkObject {
 	
 	private static final long serialVersionUID = -7450853330989936370L;
 	
-	public YeelinkDev() {
+	public YeelinkDev(Map<String, ? extends Object> map) {
+		super(map);
 	}
 	
 	public String getDevice_id() {
@@ -37,6 +38,7 @@ public class YeelinkDev extends YeelinkObject {
 		put("tags", tags);
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public YeelinkLocation getLocation() {
 		Object obj = get("location");
 		if (obj == null)
@@ -44,10 +46,7 @@ public class YeelinkDev extends YeelinkObject {
 		if (obj instanceof YeelinkLocation)
 			return (YeelinkLocation)obj;
 		if (obj instanceof Map){
-			YeelinkLocation loc = new YeelinkLocation();
-			loc.putAll((Map)obj);
-			put("location", loc);
-			return loc;
+			return new YeelinkLocation((Map)obj);
 		}
 		return null;
 	}
